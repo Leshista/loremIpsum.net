@@ -1,3 +1,4 @@
+/* ### HEADER ### */
 @media (max-width: 1100px) {
     .header {
         width: 100%;
@@ -16,5 +17,36 @@
     }
     .logo {
         margin-top: 15px;
+    }
+}
+
+/* ### FOOTER ### */
+@media (min-width: 1600px) {
+    .footer-links {
+        gap: 80px;
+    }
+}
+@media (max-width: 1400px) {
+    .footer-wrapper {
+        height: auto;
+    }
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .copyright {
+        margin-top: 15px;
+    }
+    .stick {
+        display: none;
+    }
+    .footer-links {
+        gap: 30px;
+    }
+}
+@media (max-width: 340px) {
+    .footer {
+        padding: 0;
     }
 }

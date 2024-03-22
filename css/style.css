@@ -1,18 +1,29 @@
 /* ### ALL ### */
 body {
     font-family: Lato, sans-serif;
+    font-size: 13px;
 }
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: inherit;
+}
 [scroll='goScrollToForm'] {
     cursor: pointer;
+}
+[scroll='goScrollToForm']:hover,
+.footer-links__link:hover {
+    color: #43abf0;
 }
 .active {
     color: #43abf0;
 }
 /* ### HEADER ### */
-.header__wrapper {
+.header-wrapper {
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,13 +44,15 @@ li {
     font-size: 28px;
     font-weight: bold;
 }
+.logo:hover {
+    color: inherit;
+}
 .logo .active {
     font-size: inherit;
 }
 .header-navigation {
     display: flex;
     align-items: center;
-    font-size: 13px;
     text-transform: uppercase;
 }
 .header-navigation-list {
@@ -59,3 +72,34 @@ li {
     margin-top: 100px;
 }
 /* ### FOOTER ### */
+.footer-wrapper {
+    background-color: rgba(61, 64, 80, 1);
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+}
+.payments {
+    color: #c3c3c3;
+}
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+.footer-links__item {
+    display: flex;
+    align-items: center;
+}
+.footer-links__link {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
