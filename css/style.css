@@ -14,6 +14,8 @@ a:-webkit-any-link {
 }
 [scroll='goScrollToForm'] {
     cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 [scroll='goScrollToForm']:hover,
 .footer-links__link:hover {
@@ -60,16 +62,58 @@ a:-webkit-any-link {
     align-items: center;
     gap: 60px;
 }
-.header-navigation-list__item {
-    transition-property: all;
-    transition-duration: 0.5s;
-}
+
 .active {
     font-size: 16px;
 }
 /* ### MAIN ### */
-.main {
-    margin-top: 100px;
+.content-wrapper {
+    height: 900px;
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+}
+.content {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+.content__header {
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.content__header .active {
+    font-size: inherit;
+}
+.description__header {
+    font-size: 20px;
+}
+.description__item {
+    font-size: 20px;
+}
+.description__item::before {
+    content: '-';
+    margin-right: 5px;
+}
+.content-buttons {
+    display: flex;
+    gap: 30px;
+}
+.content-buttons__button {
+    font-size: 13px;
+    padding: 15px 70px;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+.blue-button {
+    background-color: #3e9cdc;
+    color: #fff;
+}
+.blue-button:hover {
+    color: #fff;
 }
 /* ### FOOTER ### */
 .footer-wrapper {
