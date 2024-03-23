@@ -84,73 +84,102 @@
                     </div>
                 </div>
             </div>
-            <div class="form">
-                <div class="form__header">Оформление Заказа</div>
-                <div class="form__sub-header">
-                    Перед заполнением формы ознакомьтесь с нашей схемой работы!
+            <div class="form-wrapper">
+                <div class="form">
+                    <div class="form__header-block">
+                        <div class="form__header">
+                            Оформление <span class="active">Заказа</span>
+                        </div>
+                        <div class="form__sub-header">
+                            Перед заполнением формы ознакомьтесь с нашей схемой
+                            работы!
+                        </div>
+                    </div>
+                    <div class="steps">
+                        <div class="steps__element">
+                            <img src="" alt="" class="steps__img" />
+                            <span class="steps__text"
+                                >Lorem ipsum dolor sit amet</span
+                            >
+                        </div>
+                        <div class="steps__element">
+                            <img src="" alt="" class="steps__img" />
+                            <span class="steps__text"
+                                >Сonsecteturadipiscing elit</span
+                            >
+                        </div>
+                        <div class="steps__element">
+                            <img src="" alt="" class="steps__img" />
+                            <span class="steps__text"
+                                >Sed do eiusmod tempor</span
+                            >
+                        </div>
+                        <div class="steps__element">
+                            <img src="" alt="" class="steps__img" />
+                            <span class="steps__text"
+                                >Esse cillum dolore eu fugiat</span
+                            >
+                        </div>
+                        <div class="steps__element">
+                            <img src="" alt="" class="steps__img" />
+                            <span class="steps__text">
+                                Excepteur sint occaecat cupidatat non proident
+                            </span>
+                        </div>
+                    </div>
+                    <span id="goToForm"></span>
+                    <form action="" class="order-form" id="order-form">
+                        <label for="system">Выберите тип системы</label>
+                        <select id="system">
+                            <option value="Sed ut perspiciatis">
+                                Sed ut perspiciatis
+                            </option>
+                            <option value="Nemo enim ipsam">
+                                Nemo enim ipsam
+                            </option>
+                            <option value="Et harum quidem">
+                                Et harum quidem
+                            </option>
+                            <option value="Temporibus autem">
+                                Temporibus autem
+                            </option>
+                            <option value="Itaque earum rerum">
+                                Itaque earum rerum
+                            </option>
+                        </select>
+                        <input
+                            type="email"
+                            class="order-form__input"
+                            name="email"
+                            required
+                        />
+                        <input
+                            type="text"
+                            class="order-form__input"
+                            name="name"
+                            minlength="2"
+                            required
+                        />
+                        <input
+                            type="range"
+                            class="order-form__slider"
+                            name="slider"
+                            min="1"
+                            max="100"
+                        />
+                        <input
+                            type="file"
+                            class="order-form__file"
+                            name="file"
+                        />
+                        <input
+                            type="submit"
+                            class="order-form__submit"
+                            name="submit"
+                            value="Отправить"
+                        />
+                    </form>
                 </div>
-                <div class="steps">
-                    <div class="steps__element">
-                        <img src="" alt="" class="steps__img" />
-                        <span class="steps__text"
-                            >Lorem ipsum dolor sit amet</span
-                        >
-                    </div>
-                    <div class="steps__element">
-                        <img src="" alt="" class="steps__img" />
-                        <span class="steps__text"
-                            >Сonsecteturadipiscing elit</span
-                        >
-                    </div>
-                    <div class="steps__element">
-                        <img src="" alt="" class="steps__img" />
-                        <span class="steps__text">Sed do eiusmod tempor</span>
-                    </div>
-                    <div class="steps__element">
-                        <img src="" alt="" class="steps__img" />
-                        <span class="steps__text"
-                            >Esse cillum dolore eu fugiat</span
-                        >
-                    </div>
-                    <div class="steps__element">
-                        <img src="" alt="" class="steps__img" />
-                        <span class="steps__text">
-                            Excepteur sint occaecat cupidatat non proident
-                        </span>
-                    </div>
-                </div>
-                <span id="goToForm"></span>
-                <form action="" class="order-form" id="order-form">
-                    <input
-                        type="text"
-                        class="order-form__input"
-                        name="system"
-                    />
-                    <input
-                        type="email"
-                        class="order-form__input"
-                        name="email"
-                        required
-                    />
-                    <input
-                        type="text"
-                        class="order-form__input"
-                        name="name"
-                        minlength="2"
-                        required
-                    />
-                    <input
-                        type="text"
-                        class="order-form__slider"
-                        name="slider"
-                    />
-                    <input type="text" class="order-form__file" name="file" />
-                    <input
-                        type="submit"
-                        class="order-form__submit"
-                        name="submit"
-                    />
-                </form>
             </div>
         </main>
         <div class="footer-wrapper">
