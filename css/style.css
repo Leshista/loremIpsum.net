@@ -37,7 +37,7 @@ a:-webkit-any-link {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     height: 100%;
 }
 .logo {
@@ -69,12 +69,12 @@ a:-webkit-any-link {
 /* ### MAIN ### */
 /* ## CONTENT ## */
 .content-wrapper {
-    height: 900px;
+    /* height: 900px; */
     background-image: url('../images/back.jpg');
     background-size: cover;
 }
 .content {
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -85,6 +85,7 @@ a:-webkit-any-link {
 .content__header {
     text-transform: uppercase;
     font-size: 48px;
+    margin-top: 300px;
 }
 .content__header .active {
     font-size: inherit;
@@ -102,6 +103,7 @@ a:-webkit-any-link {
 .content-buttons {
     display: flex;
     gap: 30px;
+    margin-bottom: 200px;
 }
 .content-buttons__button {
     font-size: 13px;
@@ -121,7 +123,7 @@ a:-webkit-any-link {
 }
 /* ## FORM ## */
 .form-wrapper {
-    height: 900px;
+    /* height: 900px; */
     background-color: #272733;
     position: relative;
 }
@@ -141,13 +143,17 @@ a:-webkit-any-link {
 .form {
     position: relative;
     color: #bbbbbb;
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 70px;
+}
+.form__header-block {
+    margin-top: 150px;
 }
 .form__header {
     text-align: center;
@@ -174,6 +180,31 @@ a:-webkit-any-link {
     border: 1px solid #fff;
     border-radius: 5px;
 }
+.steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.steps__group {
+    display: flex;
+}
+.steps__item {
+    text-align: center;
+    width: 145px;
+}
+.steps__dots {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transform: translateY(-25px);
+}
+.steps__text {
+    font-size: 16px;
+    color: #fff;
+}
+.order-form {
+    margin-bottom: 200px;
+}
 /* ### FOOTER ### */
 .footer-wrapper {
     background-color: rgba(61, 64, 80, 1);
@@ -185,7 +216,7 @@ a:-webkit-any-link {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     height: 100%;
     align-items: center;
 }
