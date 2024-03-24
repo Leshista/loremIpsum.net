@@ -21,9 +21,6 @@ a:-webkit-any-link {
 .footer-links__link:hover {
     color: #43abf0;
 }
-.active {
-    color: #43abf0;
-}
 /* ### HEADER ### */
 .header-wrapper {
     position: fixed;
@@ -170,16 +167,6 @@ a:-webkit-any-link {
     text-align: center;
     font-size: 18px;
 }
-.order-form__submit {
-    font-size: 13px;
-    padding: 15px 100px;
-    background-color: #3e9cdc;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid #fff;
-    border-radius: 5px;
-}
 .steps {
     display: flex;
     align-items: center;
@@ -203,7 +190,260 @@ a:-webkit-any-link {
     color: #fff;
 }
 .order-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
     margin-bottom: 200px;
+}
+.order-form__group {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+.order-form__input {
+    font-size: 18px;
+    padding: 15px 70px 15px 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 3px;
+}
+.order-form__input::placeholder {
+    color: #272733;
+}
+details {
+    position: relative;
+    width: 315px;
+}
+details[open] summary {
+    z-index: 1;
+}
+details[open] summary {
+    background-color: rgba(61, 64, 80, 0.85);
+}
+details[open] input {
+    color: #fff;
+    background-color: rgba(61, 64, 80, 0.85);
+}
+summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+summary:after {
+    content: '';
+    display: inline-block;
+    float: right;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-bottom: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+    border-bottom-left-radius: 2px;
+    transform: rotate(45deg) translate(50%, 0%);
+    transform-origin: center center;
+    transition: transform ease-in-out 100ms;
+    position: relative;
+    right: -50px;
+    top: 4px;
+}
+summary:focus {
+    outline: none;
+}
+
+details[open] summary:after {
+    transform: rotate(135deg) translate(90%, 0%);
+}
+
+ul.system-select__list {
+    width: 100%;
+    background-color: #10101de5;
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    padding: 18px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3e9cdc #3d4050;
+    border: 1px solid #3d4050;
+    border-radius: 3px;
+    z-index: 1;
+}
+.system-select__item {
+    margin: 0;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 18px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.system-select__item:first-child {
+    padding-top: 0;
+}
+
+.system-select__item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+summary.system-select__inputs {
+    counter-reset: system-select__inputs;
+}
+
+summary.system-select__inputs:before {
+    content: var(--selection);
+}
+
+input[type='radio'] {
+    counter-increment: system-select__inputs;
+    appearance: none;
+    display: none;
+}
+
+input[type='radio']:checked {
+    display: inline;
+    --display: block;
+}
+
+input[type='radio']:after {
+    content: attr(title);
+    display: inline;
+    font-size: 18px;
+}
+
+ul.system-select__list {
+    counter-reset: labels;
+}
+
+.system-select__item label {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.system-select__item label span {
+    --display: none;
+    display: var(--display);
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #727272;
+    border-radius: 3px;
+}
+
+.input-file {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    white-space: nowrap;
+}
+.input-file span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    gap: 15px;
+    padding-left: 49px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #272733;
+    height: 40px;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.input-file input[type='file'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.input-file:hover span {
+    color: #43abf0;
+}
+.order-form-slider__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 74%;
+}
+.order-form-slider-counter__container {
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.order-form-slider__container {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.order-form-slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 8px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+    border-radius: 15px;
+}
+
+/* Mouse-over effects */
+.order-form-slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.order-form-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #42a9ed; /* Green background */
+    border: 3px solid #286690;
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100px;
+}
+
+.order-form-slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04aa6d; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+.order-form__submit {
+    width: 300px;
+    font-size: 15px;
+    padding: 15px 100px;
+    background-color: #3e9cdc;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 3px;
 }
 /* ### FOOTER ### */
 .footer-wrapper {
@@ -234,4 +474,8 @@ a:-webkit-any-link {
 .footer-links__link {
     transition-property: all;
     transition-duration: 0.5s;
+}
+
+.active {
+    color: #43abf0;
 }
