@@ -1,5 +1,5 @@
 // Обрабатываем нажатие на пункт, меняем то, какой пункт активный
-function activeHandler(selector) {
+const activeHandler = (selector) => {
     document.querySelectorAll(selector).forEach((e) => {
         e.addEventListener('click', () => {
             document.querySelectorAll(selector).forEach((item) => {
@@ -10,22 +10,22 @@ function activeHandler(selector) {
             e.classList.toggle('active');
         });
     });
-}
+};
+
+// Показываем значение слайдера над ним
 activeHandler('.header-navigation-list__item');
 activeHandler('.system-select__item');
 
-var slider = document.querySelector('.order-form-slider');
-var output = document.querySelector('.order-form-slider-counter');
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
+const slider = document.querySelector('.order-form-slider');
+const output = document.querySelector('.order-form-slider-counter');
+output.innerHTML = slider.value;
 slider.oninput = function () {
     output.innerHTML = this.value;
 };
 
 // Скролл к форме по нажатию на якоря, не оставляет мусора в url
 document.querySelectorAll("[scroll='goScrollToForm']").forEach((link) => {
-    link.addEventListener('click', function (e) {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('goToForm').scrollIntoView({
             behavior: 'smooth',
